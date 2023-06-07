@@ -4,20 +4,29 @@
 # последующих строках записаны N целых чисел Ai. Последняя строка содержит число X
 
 from random import randint
-N = int(input('Введите количество элементов в массиве: '))
-A = []
-for i in range(N):
-    A.append(randint(1, 10))
-print(*A)
-X = k = 3 # переменная k чтобы не изменять X
-print(X)
+n = int(input('Введите количество элементов в массиве: '))
+a = []
+for i in range(n):
+    a.append(randint(1, 10))
+print(*a)
+x = k2 = 3
+k1 = x - 1
+print(x)
 flag = True
 while flag:
+    k1 += 1
     i = 0
-    while i < N and flag:
-        if A[i] == k:
+    while i < n and flag:
+        if a[i] == k1:
             print(f'=> {i}')
             flag = False
         else: 
             i += 1
-    k +=1
+    k2 -= 1
+    i = 0
+    while i < n and flag:
+        if a[i] == k2:
+            print(f'=> {i}')
+            flag = False
+        else: 
+            i += 1

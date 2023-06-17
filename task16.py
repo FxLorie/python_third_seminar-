@@ -10,9 +10,9 @@ for i in range(N):
     A.append(randint(1, 10))
 X = 1
 count = 0
-for i in A:
-    if A[i] == X:
-        count +=1
+for i in A: # i - это не индексы списка A, а его значения
+    if i == X:
+        count += 1
 print(*A)
 print(X)
 print(f'=> {count}')

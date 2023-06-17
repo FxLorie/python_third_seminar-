@@ -18,10 +18,9 @@ print(word)
 x = 0
 for letter in word:
     for key, value in dict.items():
-        for i in key:
-            if letter == i:
-                print(f'{letter} => {value}')
-                x += value
+        if letter in key:
+            print(f'{letter} => {value}')
+            x += value
 print(f'Word summary - {x}')
                     
     
